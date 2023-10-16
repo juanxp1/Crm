@@ -2,7 +2,8 @@
     <v-card class="index" rounded="0">
         <v-layout>
             <v-navigation-drawer class="custom-drawer" :v-model="store.drawer" :width="260" :rail="store.rail"
-                color="grey-darken-4">
+                color="grey-darken-4"  expand-on-hover
+        rail>
                 <v-list>
                     <v-list-item prepend-icon="mdi-domain" class="toggle" title="Jacgsaw" @click="toggle"></v-list-item>
                 </v-list>
