@@ -50,11 +50,13 @@
 <script setup>
 import { ref } from 'vue';
 import pdfMake from 'pdfmake/build/pdfmake';
-import pdfFonts from 'pdfmake/build/vfs_fonts';
+import * as pdfFonts from 'pdfmake/build/vfs_fonts';
+
 import QRCode from 'qrcode';
 
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
+
 
 const modalidadesPago = [
     'Tarjeta de crédito/debito',
@@ -95,8 +97,8 @@ const printPdf = (action) => {
         cantidad: cantidad.value,
         descripcion: producto.value,
         precio: precio.value,
-        iva: '21%',
-        bonificacion: 'NULL',
+        iva: '0%',
+        bonificacion: 'NO',
         importeTotal: importeTotal,
     };
 
