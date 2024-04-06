@@ -13,17 +13,18 @@
 </template>
 
 <script setup>
-import { useAppStore } from '@/store/app';
+import { useAppStore } from "@/store/app";
 const store = useAppStore();
+import axios from "axios";
 
 // const toggle = () => store.sideBar();
 
+const token = localStorage.getItem('token');
 
 const toggle = () => {
   store.sideBar();
   // store.setDrawer();
 };
-
 </script>
 
-<style  scoped></style>
+<style scoped></style>
