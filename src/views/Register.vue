@@ -59,7 +59,7 @@ const goHome = () => {
   });
 };
 
-const api = "http://localhost:3000/api/v1/auth/register";
+const api = "https://papolabackend.onrender.com/api/v1/auth/register";
 
 const register = async () => {
   try {
